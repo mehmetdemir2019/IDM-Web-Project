@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Profili Güncelle</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <!-- favicon --> 
+   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <img src="images/ikon.png" alt="logo" width="100" height="80">
+
+      <form action="hastalar.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="Hastayı Bul..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/ppdc.jpg" class="image" alt="profil">
+         <h3 class="name">Defne Buse Çelik</h3>
+         <p class="role">Doktor</p>
+         <a href="profile.html" class="btn">Profili Görüntüle</a>
+         <div class="flex-btn">
+            <a href="sifre.html" class="option-btn">Şifre Değiştir</a>
+            <a href="cikis.html" class="option-btn">Çıkış Yap</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/ppdc.jpg" class="image" alt="profil">
+      <h3 class="name">Defne Buse Çelik</h3>
+      <p class="role">Doktor</p>
+      <a href="profile.html" class="btn">Profili Görüntüle</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="doctorhome.html"><i class="fas fa-home"></i><span>Ana Sayfa</span></a>
+      <a href="hastalar.html"><i class="fas fa-heartbeat"></i><span>Hastalar</span></a>
+      <a href="randevu.html"><i class="fas fa-chalkboard-user"></i><span>Randevular</span></a>
+      <a href="doctorsocial.html"><i class="fas fa-globe-asia"></i><span>Doktor Bilgi Paylaşımı</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>Kurum Detayları</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>İletişim</span></a>
+   </nav>
+
+</div>
+
+<section class="form-container">
+
+   <form action="" method="post" enctype="multipart/form-data">
+      <h3>Profili Güncelle</h3>
+      <p>Mail adresinizi giriniz.</p>
+      <input type="email" name="email" placeholder="mail adresinizi giriniz" maxlength="50" class="box">
+      <p>Mevcut şifrenizi giriniz.</p>
+      <input type="password" name="old_pass" placeholder="eski şifrenizi giriniz" maxlength="20" class="box">
+      <p>Yeni şifrenizi giriniz.</p>
+      <input type="password" name="new_pass" placeholder="yeni şifrenizi giriniz" maxlength="20" class="box">
+      <p>Yeni şifrenizi tekrardan girerek doğrulayınız.</p>
+      <input type="password" name="c_pass" placeholder="yeni şifrenizi giriniz" maxlength="20" class="box">
+      <p>Profil resminizi güncelleyebilirsiniz.</p>
+      <input type="file" accept="image/*" class="box">
+      <input type="submit" value="Profili Güncelle" name="submit" class="btn">
+   </form>
+
+</section>
+
+
+
+<footer class="footer">
+
+   &copy; 2024 by <span> IDM Technologies</span> 
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+   
+</body>
+</html>
