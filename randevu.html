@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Randevular</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <!-- favicon --> 
+   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <img src="images/ikon.png" alt="logo" width="100" height="80">
+
+      <form action="hastalar.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="Hastayı Bul.." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/ppdc.jpg" class="image" alt="profil">
+         <h3 class="name">Defne Buse Çelik</h3>
+         <p class="role">Doktor</p>
+         <a href="profile.html" class="btn">Profili Görüntüle</a>
+         <div class="flex-btn">
+            <a href="sifre.html" class="option-btn">Şifre Değiştir</a>
+            <a href="cikis.html" class="option-btn">Çıkış Yap</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/ppdc.jpg" class="image" alt="profil">
+      <h3 class="name">Defne Buse Çelik</h3>
+      <p class="role">Doktor</p>
+      <a href="profile.html" class="btn">Profili Görüntüle</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="doctorhome.html"><i class="fas fa-home"></i><span>Ana Sayfa</span></a>
+      <a href="hastalar.html"><i class="fas fa-heartbeat"></i><span>Hastalar</span></a>
+      <a href="randevu.html"><i class="fas fa-chalkboard-user"></i><span>Randevular</span></a>
+      <a href="doctorsocial.html"><i class="fas fa-globe-asia"></i><span>Doktor Bilgi Paylaşımı</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>Kurum Detayları</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>İletişim</span></a>
+   </nav>
+
+</div>
+
+<section class="randevu">
+
+   <h1 class="heading">Randevular</h1>
+
+   <form action="randevu.html" method="post" class="search-tutor">
+      <input type="text" name="search_box" placeholder="Randevu Bul.." required maxlength="100">
+      <button type="submit" class="fas fa-search" name="search_tutor"></button>
+   </form>
+
+   <div class="more-btn">
+      <a href="takvim.html" class="inline-option-btn">Randevu Takvimini Görüntüle</a>
+   </div>
+   <br>
+   <div class="box-container">
+
+      <div class="box">
+         <div class="pati">
+            <img src="images/pic-2.jpg" alt="profil">
+            <div>
+               <h3>HS104</h3>
+               <span>Ecrin Naz Çelik</span>
+            </div>
+         </div>
+         <p>Bir Sonraki Randevu : <span>05-03-2024</span></p>
+         <p>Son Kontrol : <span>02-02-2024</span></p>
+         <a href="hastaincele.html" class="inline-btn">Hastayı Görüntüle</a>
+      </div>
+
+      <div class="box">
+         <div class="pati">
+            <img src="images/pic-3.jpg" alt="profil">
+            <div>
+               <h3>AC567</h3>
+               <span>Mehmet Demir</span>
+            </div>
+         </div>
+         <p>Bir Sonraki Randevu : <span>14-03-2024</span></p>
+         <p>Son Kontrol : <span>03-02-2024</span></p>
+         <a href="hastaincele.html" class="inline-btn">Hastayı Görüntüle</a>
+      </div>
+
+      <div class="box">
+         <div class="pati">
+            <img src="images/pic-4.jpg" alt="profil">
+            <div>
+               <h3>ZX002</h3>
+               <span>İbrahim Can Gök</span>
+            </div>
+         </div>
+         <p>Bir Sonraki Randevu : <span>11-02-2024</span></p>
+         <p>Son Kontrol : <span>25-12-2023</span></p>
+         <a href="hastaincele.html" class="inline-btn">Hastayı Görüntüle</a>
+      </div>
+
+      <div class="box">
+         <div class="pati">
+            <img src="images/pic-5.jpg" alt="profil">
+            <div>
+               <h3>BZ203</h3>
+               <span>Sare Derin</span>
+            </div>
+         </div>
+         <p>Bir Sonraki Randevu : <span>20-03-2024</span></p>
+         <p>Son Kontrol : <span>14-01-2024</span></p>
+         <a href="hastaincele.html" class="inline-btn">Hastayı Görüntüle</a>
+      </div>
+
+      <div class="box">
+         <div class="pati">
+            <img src="images/pic-6.jpg" alt="profil">
+            <div>
+               <h3>MN007</h3>
+               <span>Arda Koç</span>
+            </div>
+         </div>
+         <p>Bir Sonraki Randevu : <span>13-03-2024</span></p>
+         <p>Son Kontrol : <span>06-01-2024</span></p>
+         <a href="hastaincele.html" class="inline-btn">Hastayı Görüntüle</a>
+      </div>
+
+      <div class="box">
+         <div class="pati">
+            <img src="images/pic-7.jpg" alt="profil">
+            <div>
+               <h3>UT632</h3>
+               <span>Melis Deren</span>
+            </div>
+         </div>
+         <p>Bir Sonraki Randevu : <span>01-03-2024</span></p>
+         <p>Son Kontrol : <span>23-12-2023</span></p>
+         <a href="hastaincele.html" class="inline-btn">Hastayı Görüntüle</a>
+      </div>
+
+   </div>
+
+
+</section>
+
+
+<footer class="footer">
+
+   &copy;  2024 by <span>IDM Technologies</span>
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+   
+</body>
+</html>
