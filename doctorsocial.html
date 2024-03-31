@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Doktor Bilgi Paylaşımı</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <!-- favicon --> 
+   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <img src="images/ikon.png" alt="logo" width="100" height="80">
+
+      <form action="hastalar.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="Hastayı Bul..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/ppdc.jpg" class="image" alt="profil">
+         <h3 class="name">Defne Buse Çelik</h3>
+         <p class="role">Doktor</p>
+         <a href="profile.html" class="btn">Profili Görüntüle</a>
+         <div class="flex-btn">
+            <a href="sifre.html" class="option-btn">Şifre Değiştir</a>
+            <a href="cikis.html" class="option-btn">Çıkış Yap</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/ppdc.jpg" class="image" alt="profil">
+      <h3 class="name">Defne Buse Çelik</h3>
+      <p class="role">Doktor</p>
+      <a href="profile.html" class="btn">Profili Görüntüle</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="doctorhome.html"><i class="fas fa-home"></i><span>Ana Sayfa</span></a>
+      <a href="hastalar.html"><i class="fas fa-heartbeat"></i><span>Hastalar</span></a>
+      <a href="randevu.html"><i class="fas fa-chalkboard-user"></i><span>Randevular</span></a>
+      <a href="doctorsocial.html"><i class="fas fa-globe-asia"></i><span>Doktor Bilgi Paylaşımı</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>Kurum Detayları</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>İletişim</span></a>
+   </nav>
+
+</div>
+
+<section class="watch-video">
+
+   <div class="video-container">
+      <div class="video">
+         <video src="images/Multiple Myeloma Mechanism of Action.mp4" controls poster="images/post-1-1.png" id="video"></video>
+      </div>
+      <h3 class="title">Multipl Miyelom  Hastalığı Ayın Videosu</h3>
+      <div class="info">
+         <p class="date"><i class="fas fa-calendar"></i><span>01-03-2024</span></p>
+         <p class="date"><i class="fas fa-heart"></i><span>37 beğenme</span></p>
+      </div>
+      
+</section>
+
+<section class="comments">
+
+   <h1 class="heading">4 yorum</h1>
+
+   <form action="" class="add-comment">
+      <h3>Yeni Yorum Ekle</h3>
+      <textarea name="comment_box" placeholder="Eklemek istediğiniz yorumunuzu yazınız." required maxlength="700" cols="30" rows="10"></textarea>
+      <input type="submit" value="Yorumu Ekle" class="inline-btn" name="add_comment">
+   </form>
+
+   <h1 class="heading">Doktorların Yorumları</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="user">
+            <img src="images/ppdc.jpg" alt="profil">
+            <div>
+               <h3>Defne Buse Çelik</h3>
+               <span>10-03-2024</span>
+            </div>
+         </div>
+         <div class="comment-box">Başarılı bir video olmuş. Teşekkürler!</div>
+         <form action="" class="flex-btn">
+            <input type="submit" value="Yorumu Düzenle" name="edit_comment" class="inline-option-btn">
+            <input type="submit" value="Yorumu Sil" name="delete_comment" class="inline-delete-btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-2.jpg" alt="profil">
+            <div>
+               <h3>Prof. Dr. Ayşe Derin</h3>
+               <span>15-03-2024</span>
+            </div>
+         </div>
+         <div class="comment-box">Türkçe diline çevrilip hastalarla paylaşılmalı.</div>
+      </div>
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-3.jpg" alt="profil">
+            <div>
+               <h3>Prof. Dr. Mustafa Erdem</h3>
+               <span>20-03-2024</span>
+            </div>
+         </div>
+         <div class="comment-box">Ellerinize sağlık, yararlı bir çalışma olmuş.</div>
+      </div>
+
+      <div class="box">
+         <div class="user">
+            <img src="images/pic-7.jpg" alt="profil">
+            <div>
+               <h3>Dr. Eslem Aydın</h3>
+               <span>17-03-2024</span>
+            </div>
+         </div>
+         <div class="comment-box">Her ay videolar giderek güzelleşiyor, paylaşım için teşekkürler.</div>
+      </div>
+
+   </div>
+
+</section>
+
+
+
+<footer class="footer">
+
+   &copy;  2024 by <span>IDM Technologies</span>
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+   
+</body>
+</html>
