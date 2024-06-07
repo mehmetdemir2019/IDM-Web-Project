@@ -1,0 +1,613 @@
+<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<title>IDM Teknoloji | Sağlık Teknoloji Çözümleri</title>
+<link rel="shortcut icon" href="../static/assets/img/favicon.png" type="image/x-icon">
+
+    <!-- font awesome -->
+
+  <link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+
+<link rel="stylesheet" href="../static/assets/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="../static/assets/plugins/fontawesome/css/all.min.css">
+
+<link rel="stylesheet" href="../static/assets/css/feather.css">
+
+<link rel="stylesheet" href="../static/assets/css/bootstrap-datetimepicker.min.css">
+
+<link rel="stylesheet" href="../static/assets/css/owl.carousel.min.css">
+
+<link rel="stylesheet" href="../static/assets/css/aos.css">
+
+<link rel="stylesheet" href="../static/assets/css/custom.css">
+<style type="text/css">@font-face { font-family: Roboto; src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); }</style>
+
+
+
+</head>
+<body data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+<div class="main-wrapper">
+
+<header class="header header-fixed header-one header-space">
+<div class="container">
+<nav class="navbar navbar-expand-lg header-nav">
+<div class="navbar-header">
+<a id="mobile_btn" href="javascript:void(0);">
+<span class="bar-icon">
+<span></span>
+<span></span>
+<span></span>
+</span>
+</a>
+<a href="/" class="navbar-brand logo">
+<img src="../static/assets/img/logo.png" class="img-fluid" alt="Logo">
+</a>
+</div>
+<div class="main-menu-wrapper">
+<div class="menu-header">
+<a href="/index" class="menu-logo">
+<img src="../static/assets/img/logo.png" class="img-fluid" alt="Logo">
+</a>
+<a id="menu_close" class="menu-close" href="javascript:void(0);">
+<svg class="svg-inline--fa fa-times fa-w-11" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg=""><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg><!-- <i class="fas fa-times"></i> Font Awesome fontawesome.com -->
+</a>
+</div>
+<ul class="main-nav">
+<li class="active">
+<a href="/">Ana Sayfa </a>
+</li>
+
+<li >
+<a href="/about">Hakkımızda </a>
+</li>
+
+<li >
+<a href="/contact">İletişim </a>
+</li>
+
+<li class="phone_login">
+<a href="/register">Üye Ol </a>
+</li>
+
+<li class="phone_login">
+<a href="/login">Giriş Yap</a>
+</li>
+
+
+<li class="register-btn">
+<a href="/register" class="btn reg-btn"><i class="feather-user"></i>Kayıt Ol</a>
+</li>
+<li class="register-btn">
+<a href="/login" class="btn btn-primary log-btn"><i class="feather-lock"></i>Giriş Yap</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</header>
+
+
+<section class="banner-section">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6">
+<div class="banner-content aos aos-init aos-animate" data-aos="fade-up">
+<h1>İyileşme Sürecinde <span>Multipl Miyeloma Karşı</span> Bizimle Ol!</h1>
+<img src="../static/assets/img/icons/header-icon.svg" class="header-icon" alt="header-icon">
+<p>Yakındaki Doktorlarla Zahmetsizce Randevu Alın & Hastalık Tespitinizi Gerçekleştirin.</p>
+<a href="#find" id="find" class="btn">Doktorunu Bul</a>
+</div>
+
+
+
+
+<div class="search-box-one aos aos-init aos-animate" data-aos="fade-up">
+
+
+
+
+
+<form method="POST" action="/search-doctors">
+    <div class="search-input search-line">
+        <i class="feather-search bficon"></i>
+        <div class="form-group mb-0">
+            <input type="text" class="form-control" id="clinic_name" name="clinic_name" placeholder="Hastane İsmi">
+        </div>
+    </div>
+    <div class="search-input search-map-line">
+        <i class="feather-map-pin"></i>
+        <div class="form-group mb-0">
+            <input type="text" class="form-control" id="doctor_name" name="doctor_name" placeholder="Doktor İsmi" required>
+            <a class="current-loc-icon current_location" href="javascript:void(0);">
+                <i class="feather-crosshair"></i>
+            </a>
+        </div>
+    </div>
+    <div class="search-input search-calendar-line">
+        <i class="feather-calendar"></i>
+        <div class="form-group mb-0">
+            <input type="text" class="form-control" id="clinic_address" name="clinic_address" placeholder="Klinik Adres">
+        </div>
+    </div>
+    <div class="form-search-btn">
+        <button class="btn" type="submit">Search</button>
+    </div>
+</form>
+
+
+
+</div>
+</div>
+<div class="col-lg-6" style="padding-left:100px">
+<div class="banner-img aos aos-init aos-animate" data-aos="fade-up">
+<img src="../static/assets/img/banner-img.png" class="img-fluid" alt="">
+<div class="banner-img1">
+<img src="../static/assets/img/banner-img1.png" class="img-fluid" alt="">
+</div>
+<div class="banner-img2" style="padding-top:250px">
+<img src="../static/assets/img/banner-img3.png" class="img-fluid" alt="">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section class="work-section">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-12 work-img-info aos aos-init aos-animate" data-aos="fade-up">
+<div class="work-img">
+<img src="../static/assets/img/work-img.png" class="img-fluid" alt="">
+</div>
+</div>
+<div class="col-lg-8 col-md-12 work-details">
+<div class="section-header-one aos aos-init aos-animate" data-aos="fade-up">
+<h5>Sistemimiz Nasıl İlerliyor?</h5>
+<h2 class="section-title">Süreci tamamlamak için 4 basit ve güvenilir adım</h2>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-6 aos aos-init aos-animate" data-aos="fade-up">
+<div class="work-info">
+<div class="work-icon">
+<span><img src="../static/assets/img/icons/work-01.svg" alt=""></span>
+</div>
+<div class="work-content">
+<h5>Hastalık Tespiti Yap</h5>
+<p>Şüphelendiğiniz belirtilerin doğruluğu sonucunda mikroskobik görüntüleriniz çekilir. Çekilen mikroskobik görüntülemeler hiç beklenmeden alınıp hastalık tespiti hızlı şekilde gerçekleştirilir.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 aos aos-init aos-animate" data-aos="fade-up">
+<div class="work-info">
+<div class="work-icon">
+<span><img src="../static/assets/img/icons/work-02.svg" alt=""></span>
+</div>
+<div class="work-content">
+<h5>Doktor Tercihinde Bulun</h5>
+<p>Hastalık tespitinin sonuçlandırılması durumunda hastaya en yakın hastaneleri ve uzman doktorlar platformdan araştırılabilir. Hastalığın vücutta yayılma durumu dikkate alınır.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 aos aos-init aos-animate" data-aos="fade-up">
+<div class="work-info">
+<div class="work-icon">
+<span><img src="../static/assets/img/icons/work-03.svg" alt=""></span>
+</div>
+<div class="work-content">
+<h5>Randevu Takvimini Oluştur</h5>
+<p>Doktor, hasta ile birlikte hastalık ilerleyiş hızına göre gerekli sıklıkta randevu oluşturulmasını talep eder. Talepler sonucunda hasta kendine uygun tarihleri seçer.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 aos aos-init aos-animate" data-aos="fade-up">
+<div class="work-info">
+<div class="work-icon">
+<span><img src="../static/assets/img/icons/work-04.svg" alt=""></span>
+</div>
+<div class="work-content">
+<h5>Sağlığına Kavuş</h5>
+<p>Hastaya özel bilgiler tutulur. Düzenli olarak randevular dışında mikroskobik görüntüleme tespitleri gerçekleştirilir. Hastaya en uygun tedavi yöntemleri seçilir.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="articles-section">
+<div class="container">
+<div class="row">
+<div class="col-md-12 aos aos-init aos-animate" data-aos="fade-up">
+<div class="section-header-one text-center">
+<h2 class="section-title" id="highlights">Detaylar</h2>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-6 d-flex aos aos-init aos-animate" data-aos="fade-up">
+<div class="articles-grid w-100">
+<div class="articles-info">
+<div class="articles-left">
+<a href="#highlights">
+<div class="articles-img">
+<img src="../static/assets/img/blog/blog-11.jpg" class="img-fluid" alt="">
+</div>
+</a>
+</div>
+<div class="articles-right">
+<div class="articles-content">
+
+<h4>
+<a href="#highlights">Hastalık tespiti için artık vakit kaybetme!</a>
+</h4>
+<p> Mikroskobik görüntülemelerde hastalıklı plazma hücrelerinin tespiti sayesinde bir sonraki tarihi bilinmeyen randevuna kadar bekleme. </p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 d-flex aos aos-init aos-animate" data-aos="fade-up">
+<div class="articles-grid w-100">
+<div class="articles-info">
+<div class="articles-left">
+<a href="#highlights">
+<div class="articles-img">
+<img src="../static/assets/img/blog/blog-12.jpg" class="img-fluid" alt="">
+</div>
+</a>
+</div>
+<div class="articles-right">
+<div class="articles-content">
+<h4>
+<a href="#highlights">Online olarak doktorunla en hızlı şekilde görüş ve onlara danış!</a>
+</h4>
+<p>Aklına takılan soruları, paylaşmak istediğin yeni hastalık belirtilerini doktoruna en hızlı şekilde bildir. </p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 d-flex aos aos-init aos-animate" data-aos="fade-up">
+<div class="articles-grid w-100">
+<div class="articles-info">
+<div class="articles-left">
+<a href="#highlights">
+<div class="articles-img">
+<img src="../static/assets/img/blog/blog-13.jpg" class="img-fluid" alt="">
+</div>
+</a>
+</div>
+<div class="articles-right">
+<div class="articles-content">
+
+<h4>
+<a href="#highlights">Hastalık ve iyileşme sürecini kendin de takip et</a>
+</h4>
+<p> Sadece doktorların sizlere söyledikleri yeterli değildir. Görüntülemelerinizi, sonuçlarınızı, değerlerinizi, kullandığınız ilaçları, tedavi yönteminizi hastalar da takip edebilir. </p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 d-flex aos aos-init aos-animate" data-aos="fade-up">
+<div class="articles-grid w-100">
+<div class="articles-info">
+<div class="articles-left">
+<a href="#highlights">
+<div class="articles-img">
+<img src="../static/assets/img/blog/blog-14.jpg" class="img-fluid" alt="">
+</div>
+</a>
+</div>
+<div class="articles-right">
+<div class="articles-content">
+
+<h4>
+<a href="#highlights">Sağlıkta yapay zekayı kullan!</a>
+</h4>
+<p>Mikroskobik görüntülemelerinizde hastalık tespiti yapılması süreci çok daha hızlı hale getirmeye çalıştır.  </p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="app-section">
+<div class="container">
+<div class="app-bg">
+<div class="row align-items-center">
+<div class="col-lg-6 col-md-12">
+<div class="app-content">
+<div class="app-header aos aos-init aos-animate" data-aos="fade-up">
+<h5>Çok yakında tüm hastanelerde</h5>
+<h2>Multipl Miyelomda yeni yöntem!</h2>
+</div>
+<div class="app-scan aos aos-init aos-animate" data-aos="fade-up">
+<p>Mikroskobik görüntüleme yapan tüm hastanelerde yayılmaya devam ediyoruz. Multipl Miyeloma karşı ekip olarak çalışıyoruz. </p>
+
+</div>
+<div class="google-imgs aos aos-init aos-animate" data-aos="fade-up">
+<a href="javascript:void(0);"></a>
+<a href="javascript:void(0);"></a>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 aos aos-init aos-animate" data-aos="fade-up">
+<div class="mobile-img">
+<img src="../static/assets/img/mobile-img.png" class="img-fluid" alt="img">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="faq-section">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="section-header-one text-center aos aos-init aos-animate" data-aos="fade-up">
+<h5>Merak Edilen Cevaplar</h5>
+<h2 class="section-title">Sıkça Sorulan Sorular</h2>
+</div>
+</div>
+</div>
+<div class="row align-items-center">
+<div class="col-lg-6 col-md-12 aos aos-init aos-animate" data-aos="fade-up">
+<div class="faq-img">
+<img src="../static/assets/img/faq-img.png" class="img-fluid" alt="img">
+<div class="faq-patients-count">
+<div class="faq-smile-img">
+<img src="../static/assets/img/icons/smiling-icon.svg" alt="icon">
+</div>
+<div class="faq-patients-content">
+<h4><span class="count-digit counter-loaded">270</span>k+</h4>
+<p>Takip Edilen Hasta</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12">
+<div class="faq-info aos aos-init aos-animate" data-aos="fade-up">
+<div class="accordion" id="faq-details">
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingOne">
+<a href="javascript:void(0);" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+Hangi hizmetleri sağlamaktasınız?
+</a>
+</h2>
+<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq-details" style="">
+<div class="accordion-body">
+<div class="accordion-content">
+<p> Sağladığımız hizmetler Multipl Miyelom (kemik iliği kanseri) hastalığına yöneliktir. Hastalık belirtilerinin ilerleyişi, hastalığın görüntülemeler üzerinden tespiti, doktorlar ile görüşülmesi, uygun tedavi yöntemleri sürecinin izlenmesi gibi pek çok servis hizmetini sağlıyoruz. </p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingTwo">
+<a href="javascript:void(0);" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+Mikroskobik görüntüleme sonuçlarını hastalar inceleyebilecek midir?
+</a>
+</h2>
+<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faq-details" style="">
+<div class="accordion-body">
+<div class="accordion-content">
+<p> Evet, hastalar da tespit sonuçlarını inceleyebilecektir. Hastalığın yayılım sürecini ve tedavi sürecini kendileri takip edebileceklerdir. </p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingThree">
+<a href="javascript:void(0);" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+Hizmetiniz sadece anlaşmanızın olduğu hastaneler için mi geçerlidir? </a>
+</h2>
+<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faq-details">
+<div class="accordion-body">
+<div class="accordion-content">
+<p> Evet, bireysel hasta olarak hizmet sağlamayı şuan düşünmüyoruz. Çalışmamız hastaneler ile gerçekleşmektedir. Hastalar ile iletişime geçen doktor grubu anlaşma yapılan hastanelerdeki doktorlardan oluşacaktır. Bu alanda araştırma yapan doktorlar öncelikli olarak gösterilecektir.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFour">
+<a href="javascript:void(0);" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+Randevu alım işlemi nasıl gerçekleştiriliyor? Randevu ücretlendirme sistemi nasıl işliyor?</a>
+</h2>
+<div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faq-details">
+<div class="accordion-body">
+<div class="accordion-content">
+<p> Hastalık tespitiniz tamamlandıktan ve sonuçlarınız belli olduktan sonra iligli hastanedeki doktorlara yönlendirilmektesiniz. Seçtiğiniz doktorun takviminde müsait olduğu yerlere göre randevu alabilirsiniz. Randevu sıklığınız hastalığınızın yayılma derecesine göre farklılık gösterecektir. Randevu almanız konusunda sistem sizlere uyarı verecektir. Ücretlendirmeler her randevu alırken gerçekleşmeyecektir. Aylık olarak sistemde faturanız oluşturulacak ve ödeme yapmanız beklenecektir.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFive">
+<a href="javascript:void(0);" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+Randevular online olarak gerçekleştirilebilecek mi?</a>
+</h2>
+<div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faq-details">
+<div class="accordion-body">
+<div class="accordion-content">
+<p> Randevuların yüz yüze gerçekleştirilmesi tercihimizdir. Bu yüzden yaşadığınız yerde sizlere yakın olan anlaşma yapılan hastaneleri seçmeniz bizim için önemlidir. Doktorunuzla paylaşmak istediğiniz yeni bir belirti ya da işe yaradığını gördüğünüz bir iyileşme göstergesi gibi durumlarda acil olarak görüşmek isterseniz online olarak görüşme yapabilrsiniz. Bu online görüşme bir hafta içerisinde yüz yüze görüşme ile desteklenmelidir.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<footer class="footer footer-one">
+<div class="footer-top">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-4">
+<div class="footer-widget footer-about">
+<a href="/"><div class="footer-logo">
+<img src="../static/assets/img/logo.png" alt="logo">
+</div></a>
+<div class="footer-about-content">
+<p> Sorunsuz sağlık hizmeti erişiminde bulunun ve güvenilir sağlık uzmanlarıyla zahmetsizce bağlantı kurun.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-2 col-md-4">
+<div class="footer-widget footer-menu">
+<h2 class="footer-title">Hastalar İçin</h2>
+<ul>
+<li><a href="/">Doktorları Ara</a></li>
+<li><a href="/login">Giriş Yap</a></li>
+<li><a href="/register">Kayıt Ol</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-2 col-md-4">
+<div class="footer-widget footer-menu">
+<h2 class="footer-title">Doktorlar İçin</h2>
+<ul>
+<li><a href="/login">Randevu Takvimi</a></li>
+<li><a href="/login">Giriş Yap</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-2 col-md-5">
+<div class="footer-widget footer-contact">
+<h2 class="footer-title">İletişime Geç</h2>
+<div class="footer-contact-info">
+<div class="footer-address">
+<p><i class="feather-map-pin"></i> Ankara, Türkiye</p>
+</div>
+<div class="footer-address">
+<p><i class="feather-phone-call"></i> +90 312 200 00 00</p>
+</div>
+<div class="footer-address mb-0">
+<p><i class="feather-mail"></i> idm@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-7">
+<div class="footer-widget">
+<h2 class="footer-title">Haftalık Haberlerimize Katıl</h2>
+<div class="subscribe-form">
+<form action="/subscribe" method="POST">
+<input type="email" name="email" class="form-control" placeholder="Email adresi...">
+<button type="submit" id="myButton" onclick="showLoading()" class="btn">Katıl</button>
+</form>
+</div>
+
+<div class="social-icon">
+<ul>
+<li>
+<a href="https://twitter.com/defnebc" target="_blank"><svg class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><!-- <i class="fab fa-twitter"></i> Font Awesome fontawesome.com --> </a>
+</li>
+<li>
+<a href="https://www.linkedin.com/company/idmtechnologies1/about/" target="_blank"><svg class="svg-inline--fa fa-linkedin-in fa-w-14" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg><!-- <i class="fab fa-linkedin-in"></i> Font Awesome fontawesome.com --></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container">
+
+<div class="copyright">
+<div class="row">
+<div class="col-md-6 col-lg-6">
+<div class="copyright-text">
+<p class="mb-0"> Copyright © 2024 <a href="home.html" target="_blank">IDM Technologies.</a> Tüm Hakları Saklıdır.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-6">
+
+<div class="copyright-menu">
+<ul class="policy-menu">
+<li><a href="/terms-condition">Şartlar ve Koşullar</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</footer>
+
+
+<div class="mouse-cursor cursor-outer" style="visibility: visible; transform: translate(801px, 436px);"></div>
+<div class="mouse-cursor cursor-inner" style="visibility: visible; transform: translate(801px, 436px);"></div>
+
+</div>
+
+<script src="../static/assets/js/jquery-3.6.4.min.js"></script>
+
+<script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="../static/assets/js/feather.min.js"></script>
+
+<script src="../static/assets/js/moment.min.js"></script>
+<script src="../static/assets/js/bootstrap-datetimepicker.min.js"></script>
+
+<script src="../static/assets/js/owl.carousel.min.js"></script>
+
+<script src="../static/assets/js/slick.js"></script>
+
+<script src="../static/assets/js/aos.js"></script>
+
+<script src="../static/assets/js/counter.js"></script>
+
+<script src="../static/assets/js/backToTop.js"></script>
+
+<script src="../static/assets/js/script.js"></script><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div>
+
+<div></div><div id="intellisense-root"></div>
+
+<!-- custom bot file link  -->
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/aefd2449-43b0-405b-ae38-2ab2a304ffa4/webchat/config.js" defer></script>
+
+</body></html>

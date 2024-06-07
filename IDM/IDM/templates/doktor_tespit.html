@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="../static/assets/css/main.css">
+  <link rel="stylesheet" href="../static/assets/css/style.css">
+  <style>
+    h2 {
+      text-align: center;
+      font-size: 24px;
+    }
+  </style>
+  <title>Multipl Miyelom Tespit Etme</title>
+</head>
+<body>
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      Multipl Miyelom Tespit Etme
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <div class="nav-links">
+    <a href="/">Ev</a>
+    <a href="#" target="_blank">İletişime Geç</a>
+  </div>
+</div>
+<div class="center">
+  <form id="upload-file" action="/doktor_tespit" method="POST">
+    <div class="form-input">
+      <h2>Hasta İsmi Girin</h2>
+      <select id="patient-dropdown" name="patient" style="margin: 0 auto; display: block;" onchange="this.form.submit()">
+        <option value="" selected disabled>Hasta Seç</option>
+        {% for patient in patients %}
+        <option value="{{ patient }}" {% if selected_patient == patient %}selected{% endif %}>{{ patient }}</option>
+        {% endfor %}
+      </select>
+      <br><br>
+      <h2>Tarih Seç</h2>
+      <select id="dropdown" name="date" style="margin: 0 auto; display: block;">
+        <option value="" selected disabled>Tarihler</option>
+        {% for date in dates %}
+        <option value="{{ date }}">{{ date }}</option>
+        {% endfor %}
+      </select>
+      <br><br>
+      <button type="submit" class="btn-prev" id="btn-display">Tespit Et</button>
+      <br><br>
+    </div>
+  </form>
+</div>
+</body>
+</html>

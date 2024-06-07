@@ -1,0 +1,293 @@
+<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<title>IDM Teknoloji | Sağlık Teknoloji Çözümleri</title>
+<link rel="shortcut icon" href="../static/assets/img/favicon.png" type="image/x-icon">
+
+<!-- -------------------- social icons ----------------------- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+<link rel="stylesheet" href="../static/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<link rel="stylesheet" href="../static/assets/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="../static/assets/plugins/fontawesome/css/all.min.css">
+
+<link rel="stylesheet" href="../static/assets/css/feather.css">
+
+<link rel="stylesheet" href="../static/assets/css/custom.css">
+<style type="text/css">@font-face { font-family: Roboto; src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); }</style></head>
+<body class="login-body">
+
+<div class="main-wrapper">
+
+<header class="header header-fixed header-one header-space">
+<div class="container">
+<nav class="navbar navbar-expand-lg header-nav">
+<div class="navbar-header">
+<a id="mobile_btn" href="javascript:void(0);">
+<span class="bar-icon">
+<span></span>
+<span></span>
+<span></span>
+</span>
+</a>
+<a href="/" class="navbar-brand logo">
+<img src="../static/assets/img/logo.png" class="img-fluid" alt="Logo">
+</a>
+</div>
+<div class="main-menu-wrapper">
+<div class="menu-header">
+<a href="/index" class="menu-logo">
+<img src="../static/static/assets/img/logo.png" class="img-fluid" alt="Logo">
+</a>
+<a id="menu_close" class="menu-close" href="javascript:void(0);">
+<svg class="svg-inline--fa fa-times fa-w-11" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg=""><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg><!-- <i class="fas fa-times"></i> Font Awesome fontawesome.com -->
+</a>
+</div>
+<ul class="main-nav">
+<li class="has-submenu active">
+<a href="/"> Ana Sayfa </a>
+</li>
+
+<li class="has-submenu">
+<a href="/contact-us"> İletişim </a>
+</li>
+
+<li class="phone_login">
+<a href="/register">Üye Ol </a>
+</li>
+
+<li class="phone_login">
+<a href="/login">Giriş Yap</a>
+</li>
+
+<li class="register-btn">
+<a href="/register" class="btn reg-btn"><i class="feather-user"></i>Kayıt Ol</a>
+</li>
+<li class="register-btn">
+<a href="/login" class="btn btn-primary log-btn"><i class="feather-lock"></i>Giriş Yap</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</header>
+
+
+<div class="login-content-info">
+<div class="container dr-verify">
+
+<div class="row justify-content-center">
+<div class="col-lg-4 col-md-6">
+<div class="account-content">
+<div class="login-shapes">
+<div class="shape-img-left">
+<img src="../static/assets/img/shape-01.png" alt="">
+</div>
+<div class="shape-img-right">
+<img src="../static/assets/img/shape-02.png" alt="">
+</div>
+</div>
+<div class="widget-set">
+<div class="account-info">
+<div class="widget-content multistep-form">
+<fieldset id="first">
+<div class="login-back">
+  <a href="/register"><i class="fa-solid fa-arrow-left-long"></i> Geri</a>
+</div>
+
+ <div class="login-title">
+        <h3>Güvenlik Doğrulaması</h3>
+        <p class="mb-0">Yeni hesabınızı lütfen doğrulayınız.</p></div>
+        {% if error %}
+        <p class="error-message" style="padding-top:12px">{{ error }}</p>
+        {% endif %}
+<div class="widget-setcount">
+    <ul id="progressbar">
+        <li class="progress-active">
+            <div class="step-box">
+                <div class="step-icon">
+                    <span>
+                        <img src="../static/assets/img/icons/signup-unlock.svg" alt="icon">
+                    </span>
+                </div>
+                <div class="step-content">
+                    <p>Adım 2</p>
+                    <h4>Hesap Doğrulama</h4>
+                </div>
+            </div>
+        </li>
+        <li>
+        </li>
+    </ul>
+</div>
+
+
+<form action="/verify/{{ email }}" method="POST"
+class="signup-verification-form">
+
+        <div class="form-group">
+            <div class="form-group-flex">
+                <label>Email Doğrulama Kodu</label>
+
+            </div>
+            <div class="pass-group">
+                <input type="text" name="verification_code" class="form-control form-control-phone" placeholder="******" required="" autocomplete="off">
+            </div>
+            <p class="signup-code">Mail adresinize gönderilen 6 sayıdan oluşan kodu yazınız.</p>
+        </div>
+        <div class="form-group mb-0">
+            <!-- <button id="nextBtn" class="btn btn-primary btn-block" type="button">Submit</button> -->
+            <button class="btn btn-block" type="submit">Kayıt Ol</button>        </div>
+    </form>
+</fieldset>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Initially hide the Submit button
+    $(".signup-verification-form button[type='submit']").hide();
+
+    // Click event for the Next button
+    $("#nextBtn").click(function() {
+        // Show the Submit button
+        $(".signup-verification-form button[type='submit']").show();
+
+        // Hide the Next button
+        $(this).hide();
+
+        // Update the progress bar
+        $("#progressbar li.progress-active").next().addClass("progress-active");
+    });
+});
+</script>
+ -->
+
+<footer class="footer footer-one">
+<div class="footer-top">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-4">
+<div class="footer-widget footer-about">
+<a href="/"><div class="footer-logo">
+<img src="../static/assets/img/logo.png" alt="logo">
+</div></a>
+<div class="footer-about-content">
+<p> Sorunsuz sağlık hizmeti erişiminde bulunun ve güvenilir sağlık uzmanlarıyla zahmetsizce bağlantı kurun.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-2 col-md-4">
+<div class="footer-widget footer-menu">
+<h2 class="footer-title">Hastalar İçin</h2>
+<ul>
+<li><a href="/">Doktorları Ara</a></li>
+<li><a href="/login">Giriş Yap</a></li>
+<li><a href="/register">Kayıt Ol</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-2 col-md-4">
+<div class="footer-widget footer-menu">
+<h2 class="footer-title">Doktorlar İçin</h2>
+<ul>
+<li><a href="/login">Randevu Takvimi</a></li>
+<li><a href="/login">Giriş Yap</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-2 col-md-5">
+<div class="footer-widget footer-contact">
+<h2 class="footer-title">İletişime Geç</h2>
+<div class="footer-contact-info">
+<div class="footer-address">
+<p><i class="feather-map-pin"></i> Ankara, Türkiye</p>
+</div>
+<div class="footer-address">
+<p><i class="feather-phone-call"></i> +90 312 200 00 00</p>
+</div>
+<div class="footer-address mb-0">
+<p><i class="feather-mail"></i> idm@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-7">
+<div class="footer-widget">
+<h2 class="footer-title">Haftalık Haberlerimize Katıl</h2>
+<div class="subscribe-form">
+<form action="/subscribe" method="POST">
+<input type="email" name="email" class="form-control" placeholder="Email adresi.." required="" autocomplete="off">
+<button type="submit" class="btn">Katıl</button>
+</form>
+</div>
+<div class="social-icon">
+<ul>
+<li>
+<a href="https://twitter.com/defnebc" target="_blank"><svg class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><!-- <i class="fab fa-twitter"></i> Font Awesome fontawesome.com --> </a>
+</li>
+<li>
+<a href="https://www.linkedin.com/company/idmtechnologies1/about/" target="_blank"><svg class="svg-inline--fa fa-linkedin-in fa-w-14" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg><!-- <i class="fab fa-linkedin-in"></i> Font Awesome fontawesome.com --></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container">
+
+<div class="copyright">
+<div class="row">
+<div class="col-md-6 col-lg-6">
+<div class="copyright-text">
+<p class="mb-0"> Copyright © 2024 <a href="home.html" target="_blank">IDM Technologies.</a> Tüm Hakları Saklıdır.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-6">
+
+<div class="copyright-menu">
+<ul class="policy-menu">
+<li><a href="/terms-condition">Şartlar ve Koşullar</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</footer>
+
+
+<div class="mouse-cursor cursor-outer" style="visibility: visible; transform: translate(899px, 63px);"></div>
+<div class="mouse-cursor cursor-inner" style="visibility: visible; transform: translate(899px, 63px);"></div>
+
+</div>
+
+
+<script src="../static/assets/js/jquery-3.6.4.min.js"></script>
+
+<script src="../static/assets/js/slick.js"></script>
+
+<script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+
+<script src="../static/assets/js/feather.min.js"></script>
+
+<script src="../static/assets/js/script.js"></script><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div><div class="sidebar-overlay"></div>
+<div></div></body></html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/assets/css/main.css">
+  <link rel="stylesheet" href="../static/assets/css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    .nav .nav-header {
+      display: inline;
+    }
+    .nav .nav-header .nav-title {
+      display: inline-block;
+      font-size: 22px;
+      color: #fff;
+      padding: 14px 20px;
+      text-align: center;
+    }
+    .nav .nav-links {
+      display: inline-block;
+      float: right;
+    }
+    .nav .nav-links a {
+      float: left;
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    .nav .nav-links a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .float-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .float-child {
+      flex: 1;
+      margin: 10px;
+      max-width: 45%;
+    }
+    .float-child img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+    }
+    .float-table {
+      text-align: center;
+      margin-top: 20px;
+    }
+    h2.a {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+  </style>
+  <title>Multipl Miyelom Tespit Etme</title>
+</head>
+<body>
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        Multipl Miyelom Tespit Etme
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="/">Ev</a>
+      <a href="#" target="_blank">İletişime Geç</a>
+    </div>
+  </div>
+  <div class="float-container">
+    <div class="float-child">
+      <h2 class="a">Yüklenen Mikroskobik Görüntü</h2>
+      <div class="green"><img src="{{ url_for('static', filename='uploads/' + file_name) }}"></div>
+    </div>
+    <div class="float-child">
+      <h2 class="a">Tespit Görüntüsü</h2>
+      <div class="blue"><img src="{{ url_for('static', filename='uploads/' + detected_file_name) }}"></div>
+    </div>
+  </div>
+  <br><br>
+  <div class="float-table">
+    <h3>Hastalık İhtimali: {{ overall_confidence }}%</h3>
+  </div>
+</body>
+</html>
